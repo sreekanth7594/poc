@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="op" format="json">
+      <types:shape format="weave" example="examples/Flights.json"><![CDATA[%dw 2.0
+
+type op = Array<{|  CODE: String,   DIRECT_FLIGHTS: String,   CITY: String,   TZ: String,   NAME: String,   LON: String,   CARRIERS: String,   STATE: String,   RUNWAY_LENGTH: String,   LAT: String,   URL: String|}> {"example": "[{\\\"CODE\\\":\\\"T\\\",\\\"DIRECT_FLIGHTS\\\":\\\"T\\\",\\\"CITY\\\":\\\"T\\\",\\\"TZ\\\":\\\"T\\\",\\\"NAME\\\":\\\"T\\\",\\\"LON\\\":\\\"T\\\",\\\"CARRIERS\\\":\\\"T\\\",\\\"STATE\\\":\\\"T\\\",\\\"RUNWAY_LENGTH\\\":\\\"T\\\",\\\"LAT\\\":\\\"T\\\",\\\"URL\\\":\\\"T\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#df0c7aad-ca61-4403-bd36-3699ec6badb9">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="op"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

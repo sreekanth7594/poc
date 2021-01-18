@@ -1,0 +1,15 @@
+[
+    {
+        "CODE": "T",
+        "DIRECT_FLIGHTS": "T",
+        "CITY": "T",
+        "TZ": "T",
+        "NAME": "T",
+        "LON": "T",
+        "CARRIERS": "T",
+        "STATE": "T",
+        "RUNWAY_LENGTH": "T",
+        "LAT": "T",
+        "URL": "T"
+    }
+]
